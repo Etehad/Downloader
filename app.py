@@ -110,6 +110,7 @@ def extract_from_network_requests(page_url, html_content):
     return video_urls
 
 def extract_videos_from_html(page_url, html_content):
+    # استفاده از html.parser به جای lxml
     soup = BeautifulSoup(html_content, 'html.parser')
     videos = []
     seen_urls = set()
